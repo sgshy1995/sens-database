@@ -43,5 +43,5 @@ npm run m:revert
 ### 创建 migration
 
 ```bash
-typeorm entity:create --name xxxx
+typeorm migration:create src/migration/xxx
 ```
