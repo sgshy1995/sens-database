@@ -76,14 +76,14 @@ export class CreateUserTable1658731476578 implements MigrationInterface {
                 {
                     name: 'wx_unionid',
                     type: 'varchar',
-                    isNullable: false,
+                    isNullable: true,
                     comment: '用户微信唯一标识'
                 },
                 /* 用户微信昵称 */
                 {
                     name: 'wx_nickname',
                     type: 'varchar',
-                    isNullable: false,
+                    isNullable: true,
                     comment: '用户微信昵称'
                 },
                 /* 最近登录时间 */
