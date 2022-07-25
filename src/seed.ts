@@ -23,6 +23,7 @@ createConnection().then(async connection => {
                 // sysNotificationEntity
                 let sysNotificationEntity = new SysNotification();
                 sysNotificationEntity = Object.assign(sysNotificationEntity, item)
+                sysNotificationEntity.id && delete sysNotificationEntity.id
                 await manager.save(sysNotificationEntity)
                 resolve('seed')
             }catch(e){

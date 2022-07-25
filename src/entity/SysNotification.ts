@@ -1,8 +1,8 @@
-import { Entity, PrimaryColumn, Column, CreateDateColumn, UpdateDateColumn } from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn } from "typeorm";
 
 @Entity('sys_notifications')
 export class SysNotification {
-    @PrimaryColumn('varchar')
+    @PrimaryGeneratedColumn('uuid')
     id: string;
 
     @Column('varchar')

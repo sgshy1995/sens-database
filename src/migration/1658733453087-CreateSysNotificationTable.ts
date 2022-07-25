@@ -9,10 +9,12 @@ export class CreateSysNotificationTable1658733453087 implements MigrationInterfa
                 /* 通知id */
                 {
                     name: 'id',
+                    isGenerated: true,
                     isPrimary: true,
+                    generationStrategy: 'uuid',
                     type: 'varchar',
                     isNullable: false,
-                    comment: '信息id'
+                    comment: '通知id'
                 },
                 /* 通知标题 */
                 {

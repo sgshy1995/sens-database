@@ -9,7 +9,9 @@ export class CreateUserInfoTable1658733076291 implements MigrationInterface {
                 /* 信息id */
                 {
                     name: 'id',
+                    isGenerated: true,
                     isPrimary: true,
+                    generationStrategy: 'uuid',
                     type: 'varchar',
                     isNullable: false,
                     comment: '信息id'

@@ -9,7 +9,9 @@ export class CreateUserTable1658731476578 implements MigrationInterface {
                 /* 用户id */
                 {
                     name: 'id',
+                    isGenerated: true,
                     isPrimary: true,
+                    generationStrategy: 'uuid',
                     type: 'varchar',
                     isNullable: false,
                     comment: '用户id'

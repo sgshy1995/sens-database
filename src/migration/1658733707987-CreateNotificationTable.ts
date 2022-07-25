@@ -9,10 +9,12 @@ export class CreateNotificationTable1658733707987 implements MigrationInterface 
                 /* 通知id */
                 {
                     name: 'id',
+                    isGenerated: true,
                     isPrimary: true,
+                    generationStrategy: 'uuid',
                     type: 'varchar',
                     isNullable: false,
-                    comment: '信息id'
+                    comment: '通知id'
                 },
                 /* 用户id */
                 {
