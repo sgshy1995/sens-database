@@ -55,7 +55,7 @@ export class CreateNotificationTable1658733707987 implements MigrationInterface 
                 {
                     name: 'publish_time',
                     type: 'timestamp',
-                    isNullable: true,
+                    isNullable: false,
                     comment: '发布时间'
                 },
                 /* 通知状态 */
@@ -63,7 +63,7 @@ export class CreateNotificationTable1658733707987 implements MigrationInterface 
                     name: 'status',
                     type: 'int',
                     isNullable: false,
-                    comment: '信息状态'
+                    comment: '通知状态'
                 },
                 {
                     name: 'created_at',

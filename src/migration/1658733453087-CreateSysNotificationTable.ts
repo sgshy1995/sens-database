@@ -42,7 +42,7 @@ export class CreateSysNotificationTable1658733453087 implements MigrationInterfa
                     name: 'status',
                     type: 'int',
                     isNullable: false,
-                    comment: '信息状态'
+                    comment: '通知状态'
                 },
                 {
                     name: 'created_at',
