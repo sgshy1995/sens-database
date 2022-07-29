@@ -44,6 +44,13 @@ export class CreateUserTable1658731476578 implements MigrationInterface {
                     isNullable: false,
                     comment: '用户密码'
                 },
+                /* 盐 */
+                {
+                    name: 'salt',
+                    type: 'varchar',
+                    isNullable: false,
+                    comment: '盐'
+                },
                 /* 用户性别 */
                 {
                     name: 'gender',
