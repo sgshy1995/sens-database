@@ -9,6 +9,7 @@ createConnection().then(async connection => {
     const chargeTypesMsq: SysNotification[] = [
         {
             id: uuidV4().toString(),
+            preset: 1,
             title: '欢迎来到森普健康',
             content: 'hi, 欢迎来到森普健康, 快开始你的健康之旅吧！',
             publish_time: new Date(),

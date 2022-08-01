@@ -23,6 +23,13 @@ export class CreateSysNotificationTable1658733453087 implements MigrationInterfa
                     isNullable: false,
                     comment: '通知标题'
                 },
+                /* 是否预置 */
+                {
+                    name: 'preset',
+                    type: 'int',
+                    isNullable: false,
+                    comment: '是否预置'
+                },
                 /* 通知内容 */
                 {
                     name: 'content',

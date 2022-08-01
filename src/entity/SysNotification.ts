@@ -5,6 +5,9 @@ export class SysNotification {
     @PrimaryGeneratedColumn('uuid')
     id: string;
 
+    @Column('int')
+    preset: number;
+
     @Column('varchar')
     title: string;
 
