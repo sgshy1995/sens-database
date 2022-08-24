@@ -27,7 +27,7 @@ export class CreateUserTable1658731476578 implements MigrationInterface {
                 {
                     name: 'name',
                     type: 'varchar',
-                    isNullable: false,
+                    isNullable: true,
                     comment: '用户姓名'
                 },
                 /* 用户头像 */
@@ -37,25 +37,18 @@ export class CreateUserTable1658731476578 implements MigrationInterface {
                     isNullable: true,
                     comment: '用户头像'
                 },
-                /* 用户密码 */
+                /* 用户背景 */
                 {
-                    name: 'password',
+                    name: 'background',
                     type: 'varchar',
-                    isNullable: false,
-                    comment: '用户密码'
-                },
-                /* 盐 */
-                {
-                    name: 'salt',
-                    type: 'varchar',
-                    isNullable: false,
-                    comment: '盐'
+                    isNullable: true,
+                    comment: '用户背景'
                 },
                 /* 用户性别 */
                 {
                     name: 'gender',
                     type: 'int',
-                    isNullable: false,
+                    isNullable: true,
                     comment: '用户性别'
                 },
                 /* 用户手机号 */

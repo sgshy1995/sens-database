@@ -58,6 +58,13 @@ export class CreateNotificationTable1658733707987 implements MigrationInterface 
                     isNullable: false,
                     comment: '发布时间'
                 },
+                /* 阅读状态 */
+                {
+                    name: 'read',
+                    type: 'int',
+                    isNullable: false,
+                    comment: '阅读状态'
+                },
                 /* 通知状态 */
                 {
                     name: 'status',

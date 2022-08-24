@@ -68,7 +68,7 @@ export class CreateUserInfoTable1658733076291 implements MigrationInterface {
                 /* 影像资料 */
                 {
                     name: 'image_data',
-                    type: 'varchar',
+                    type: 'text',
                     isNullable: true,
                     comment: '影像资料'
                 },
