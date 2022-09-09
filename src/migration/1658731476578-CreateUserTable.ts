@@ -93,6 +93,13 @@ export class CreateUserTable1658731476578 implements MigrationInterface {
                     isNullable: true,
                     comment: '最近登录时间'
                 },
+                /* 是否为admin权限 1 是 0 否 */
+                {
+                    name: 'is_admin',
+                    type: 'int',
+                    isNullable: false,
+                    comment: '是否为admin权限'
+                },
                 /* 用户状态 */
                 {
                     name: 'status',
