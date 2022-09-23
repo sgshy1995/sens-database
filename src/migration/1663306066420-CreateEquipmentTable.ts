@@ -1,12 +1,12 @@
 import { MigrationInterface, QueryRunner, Table } from "typeorm"
 
-export class CreateCourseInVideoTable1663124006988 implements MigrationInterface {
+export class CreateEquipmentTable1663306066420 implements MigrationInterface {
 
     public async up(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.createTable(new Table({
-            name: 'course_in_videos',
+            name: 'equipments',
             columns: [
-                /* 视频id */
+                /* 器材id */
                 {
                     name: 'id',
                     isGenerated: true,
@@ -14,56 +14,63 @@ export class CreateCourseInVideoTable1663124006988 implements MigrationInterface
                     generationStrategy: 'uuid',
                     type: 'varchar',
                     isNullable: false,
-                    comment: '视频id'
+                    comment: '器材id'
                 },
-                 /* 课程id */
-                 {
-                    name: 'course_id',
+                /* 器材编号 唯一编号，数字和大写字母组合 */
+                {
+                    name: 'serial_number',
                     type: 'varchar',
                     isNullable: false,
-                    comment: '课程id'
+                    comment: '器材编号'
                 },
-                /* 视频标题 */
+                /* 器材标题 */
                 {
                     name: 'title',
                     type: 'varchar',
                     isNullable: false,
-                    comment: '视频标题'
+                    comment: '器材标题'
                 },
-                /* 视频封面 */
+                /* 器材封面 */
                 {
                     name: 'cover',
                     type: 'varchar',
                     isNullable: false,
-                    comment: '视频封面'
+                    comment: '器材封面'
                 },
-                /* 视频介绍 */
+                /* 器材介绍 */
                 {
                     name: 'description',
                     type: 'text',
                     isNullable: false,
-                    comment: '视频介绍'
+                    comment: '器材介绍'
                 },
-                /* 视频地址 */
-                {
-                    name: 'source',
-                    type: 'varchar',
+                 /* 器材长图 */
+                 {
+                    name: 'long_figure',
+                    type: 'text',
                     isNullable: false,
-                    comment: '视频地址'
+                    comment: '器材长图'
                 },
-                /* 视频时长 */
+                /* 器材类型 0 康复训练器材 1 康复理疗设备 2 康复治疗师工具 */
                 {
-                    name: 'time_length',
-                    type: 'varchar',
-                    isNullable: false,
-                    comment: '视频时长'
-                },
-                /* 视频排序 */
-                {
-                    name: 'sort',
+                    name: 'equipment_type',
                     type: 'int',
                     isNullable: false,
-                    comment: '视频排序'
+                    comment: '器材类型'
+                },
+                /* 购买总次数 */
+                {
+                    name: 'frequency_total_num',
+                    type: 'int',
+                    isNullable: false,
+                    comment: '购买总次数'
+                },
+                /* 是否轮播 1 是 0 否 */
+                {
+                    name: 'carousel',
+                    type: 'int',
+                    isNullable: false,
+                    comment: '是否轮播'
                 },
                 /* 发布时间 */
                 {
@@ -72,12 +79,12 @@ export class CreateCourseInVideoTable1663124006988 implements MigrationInterface
                     isNullable: true,
                     comment: '发布时间'
                 },
-                /* 视频状态 1 正常 0 下架 */
+                /* 器材状态 1 正常 0 下架 */
                 {
                     name: 'status',
                     type: 'int',
                     isNullable: false,
-                    comment: '视频状态'
+                    comment: '课程状态'
                 },
                 {
                     name: 'created_at',
@@ -96,8 +103,8 @@ export class CreateCourseInVideoTable1663124006988 implements MigrationInterface
     }
 
     public async down(queryRunner: QueryRunner): Promise<void> {
-        await queryRunner.dropTable('course_in_videos');
-        console.log('回滚 course_in_videos 表 完成')
+        await queryRunner.dropTable('equipments');
+        console.log('回滚 equipments 表 完成')
     }
 
 }
