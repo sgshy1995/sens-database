@@ -58,12 +58,26 @@ export class CreateEquipmentTable1663306066420 implements MigrationInterface {
                     isNullable: false,
                     comment: '器材类型'
                 },
+                /* 型号数量 */
+                {
+                    name: 'model_num',
+                    type: 'int',
+                    isNullable: false,
+                    comment: '型号数量'
+                },
                 /* 购买总次数 */
                 {
                     name: 'frequency_total_num',
                     type: 'int',
                     isNullable: false,
                     comment: '购买总次数'
+                },
+                /* 是否包含折扣 1 是 0 否 */
+                {
+                    name: 'has_discount',
+                    type: 'int',
+                    isNullable: false,
+                    comment: '是否包含折扣'
                 },
                 /* 是否轮播 1 是 0 否 */
                 {

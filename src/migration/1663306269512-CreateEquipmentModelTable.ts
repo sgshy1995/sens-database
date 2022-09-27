@@ -107,6 +107,13 @@ export class CreateEquipmentModelTable1663306269512 implements MigrationInterfac
                     isNullable: false,
                     comment: '发货地'
                 },
+                /* 型号排序 */
+                {
+                    name: 'sort',
+                    type: 'int',
+                    isNullable: false,
+                    comment: '型号排序'
+                },
                 /* 发布时间 */
                 {
                     name: 'publish_time',
