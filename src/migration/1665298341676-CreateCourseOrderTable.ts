@@ -23,26 +23,40 @@ export class CreateCourseOrderTable1665298341676 implements MigrationInterface {
                     isNullable: false,
                     comment: '用户id'
                 },
-                 /* 课程id集合 逗号隔开 */
+                 /* 课程id */
                  {
-                    name: 'course_ids',
-                    type: 'text',
-                    isNullable: false,
-                    comment: '课程id集合'
-                },
-                /* 课程类型集合 1 直播课 0 视频课 逗号隔开 */
-                {
-                    name: 'course_types',
+                    name: 'course_id',
                     type: 'varchar',
                     isNullable: false,
-                    comment: '课程类型集合'
+                    comment: '课程id'
                 },
-                /* 购买价格集合 逗号隔开 */
+                /* 课程类型 1 直播课 0 视频课 */
                 {
-                    name: 'order_prices',
+                    name: 'course_type',
+                    type: 'int',
+                    isNullable: false,
+                    comment: '课程类型'
+                },
+                /* 购买价格 */
+                {
+                    name: 'order_price',
                     type: 'varchar',
                     isNullable: false,
-                    comment: '购买价格集合'
+                    comment: '购买价格'
+                },
+                /* 购买排序 */
+                {
+                    name: 'order_sort',
+                    type: 'int',
+                    isNullable: false,
+                    comment: '购买排序'
+                },
+                /* 购买总数 */
+                {
+                    name: 'order_total',
+                    type: 'int',
+                    isNullable: false,
+                    comment: '购买总数'
                 },
                 /* 订单号（28位）编号规则：系统ID（6位）+系统交易日期（8位：YYYYMMDD)+系统交易时间戳(6位：HHmmss)+订单序号（8位，保证当天唯一） */
                 {
