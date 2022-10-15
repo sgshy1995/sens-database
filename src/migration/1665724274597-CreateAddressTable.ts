@@ -1,12 +1,12 @@
 import { MigrationInterface, QueryRunner, Table } from "typeorm"
 
-export class CreateUserInfoTable1658733076291 implements MigrationInterface {
+export class CreateAddressTable1665724274597 implements MigrationInterface {
 
     public async up(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.createTable(new Table({
-            name: 'user_infos',
+            name: 'addresses',
             columns: [
-                /* 信息id */
+                /* 收货地址id */
                 {
                     name: 'id',
                     isGenerated: true,
@@ -14,7 +14,7 @@ export class CreateUserInfoTable1658733076291 implements MigrationInterface {
                     generationStrategy: 'uuid',
                     type: 'varchar',
                     isNullable: false,
-                    comment: '信息id'
+                    comment: '收货地址id'
                 },
                 /* 用户id */
                 {
@@ -23,68 +23,68 @@ export class CreateUserInfoTable1658733076291 implements MigrationInterface {
                     isNullable: false,
                     comment: '用户id'
                 },
-                /* 积分 */
+                /* 省编号 */
                 {
-                    name: 'integral',
-                    type: 'int',
-                    isNullable: false,
-                    comment: '积分'
-                },
-                /* 余额 */
-                {
-                    name: 'balance',
+                    name: 'province_code',
                     type: 'varchar',
                     isNullable: false,
-                    comment: '余额'
+                    comment: '省编号'
                 },
-                /* 年龄 */
+                /* 市编号 */
                 {
-                    name: 'age',
-                    type: 'int',
-                    isNullable: true,
-                    comment: '年龄'
+                    name: 'city_code',
+                    type: 'varchar',
+                    isNullable: false,
+                    comment: '市编号'
                 },
-                /* 既往伤病史 */
+                /* 区县编号 */
                 {
-                    name: 'injury_history',
+                    name: 'area_code',
+                    type: 'varchar',
+                    isNullable: false,
+                    comment: '区县编号'
+                },
+                /* 省市区文本 */
+                {
+                    name: 'detail_text',
+                    type: 'varchar',
+                    isNullable: false,
+                    comment: '省市区文本'
+                },
+                /* 全部文本 */
+                {
+                    name: 'all_text',
+                    type: 'varchar',
+                    isNullable: false,
+                    comment: '全部文本'
+                },
+                /* 联系电话 */
+                {
+                    name: 'phone',
+                    type: 'varchar',
+                    isNullable: false,
+                    comment: '联系电话'
+                },
+                /* 联系人 */
+                {
+                    name: 'name',
+                    type: 'varchar',
+                    isNullable: false,
+                    comment: '联系人'
+                },
+                /* 标签 */
+                {
+                    name: 'tag',
                     type: 'varchar',
                     isNullable: true,
-                    comment: '既往伤病史'
+                    comment: '标签'
                 },
-                /* 近期伤病描述 */
-                {
-                    name: 'injury_recent',
-                    type: 'varchar',
-                    isNullable: true,
-                    comment: '近期伤病描述'
-                },
-                /* 出院小结 */
-                {
-                    name: 'discharge_abstract',
-                    type: 'varchar',
-                    isNullable: true,
-                    comment: '出院小结'
-                },
-                /* 影像资料 */
-                {
-                    name: 'image_data',
-                    type: 'text',
-                    isNullable: true,
-                    comment: '影像资料'
-                },
-                /* 默认地址id */
-                {
-                    name: 'default_address_id',
-                    type: 'varchar',
-                    isNullable: true,
-                    comment: '默认地址id'
-                },
-                /* 信息状态 */
+                /* 收货地址状态 1 正常 0 删除 */
                 {
                     name: 'status',
                     type: 'int',
                     isNullable: false,
-                    comment: '信息状态'
+                    comment: '收货地址状态'
                 },
                 {
                     name: 'created_at',
@@ -103,8 +103,8 @@ export class CreateUserInfoTable1658733076291 implements MigrationInterface {
     }
 
     public async down(queryRunner: QueryRunner): Promise<void> {
-        await queryRunner.dropTable('user_infos');
-        console.log('回滚 user_infos 表 完成')
+        await queryRunner.dropTable('addresses');
+        console.log('回滚 addresses 表 完成')
     }
 
 }
