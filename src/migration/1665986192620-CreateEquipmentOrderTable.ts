@@ -23,26 +23,33 @@ export class CreateEquipmentOrderTable1665986192620 implements MigrationInterfac
                     isNullable: false,
                     comment: '用户id'
                 },
-                 /* 器材id */
+                 /* 器材id集合 */
                  {
-                    name: 'equipment_id',
-                    type: 'varchar',
+                    name: 'equipment_ids',
+                    type: 'text',
                     isNullable: false,
-                    comment: '器材id'
+                    comment: '器材id集合'
                 },
-                 /* 型号id */
+                 /* 型号id集合 */
                  {
-                    name: 'model_id',
-                    type: 'varchar',
+                    name: 'model_ids',
+                    type: 'text',
                     isNullable: false,
-                    comment: '型号id'
+                    comment: '型号id集合'
                 },
-                /* 购买数量 */
+                /* 购买价格集合 */
                 {
-                    name: 'order_num',
-                    type: 'int',
+                    name: 'order_prices',
+                    type: 'varchar',
                     isNullable: false,
-                    comment: '购买数量'
+                    comment: '购买价格集合'
+                },
+                /* 购买数量集合 */
+                {
+                    name: 'order_nums',
+                    type: 'varchar',
+                    isNullable: false,
+                    comment: '购买数量集合'
                 },
                 /* 购买总数量 */
                 {
@@ -50,20 +57,6 @@ export class CreateEquipmentOrderTable1665986192620 implements MigrationInterfac
                     type: 'int',
                     isNullable: false,
                     comment: '购买总数量'
-                },
-                /* 购买价格 */
-                {
-                    name: 'order_price',
-                    type: 'varchar',
-                    isNullable: false,
-                    comment: '购买价格'
-                },
-                /* 购买排序 */
-                {
-                    name: 'order_sort',
-                    type: 'int',
-                    isNullable: false,
-                    comment: '购买排序'
                 },
                 /* 购买器材种类数 */
                 {

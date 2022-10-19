@@ -23,33 +23,26 @@ export class CreateCourseOrderTable1665298341676 implements MigrationInterface {
                     isNullable: false,
                     comment: '用户id'
                 },
-                 /* 课程id */
+                 /* 课程id集合 */
                  {
-                    name: 'course_id',
+                    name: 'course_ids',
+                    type: 'text',
+                    isNullable: false,
+                    comment: '课程id集合'
+                },
+                /* 课程类型集合 1 直播课 0 视频课 */
+                {
+                    name: 'course_types',
                     type: 'varchar',
                     isNullable: false,
-                    comment: '课程id'
+                    comment: '课程类型集合'
                 },
-                /* 课程类型 1 直播课 0 视频课 */
+                /* 购买价格集合 */
                 {
-                    name: 'course_type',
-                    type: 'int',
-                    isNullable: false,
-                    comment: '课程类型'
-                },
-                /* 购买价格 */
-                {
-                    name: 'order_price',
+                    name: 'order_prices',
                     type: 'varchar',
                     isNullable: false,
-                    comment: '购买价格'
-                },
-                /* 购买排序 */
-                {
-                    name: 'order_sort',
-                    type: 'int',
-                    isNullable: false,
-                    comment: '购买排序'
+                    comment: '购买价格集合'
                 },
                 /* 购买总数 */
                 {
