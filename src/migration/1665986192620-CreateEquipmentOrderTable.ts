@@ -156,6 +156,13 @@ export class CreateEquipmentOrderTable1665986192620 implements MigrationInterfac
                     isNullable: true,
                     comment: '物流单号'
                 },
+                /* 物流公司 */
+                {
+                    name: 'courier_company',
+                    type: 'varchar',
+                    isNullable: true,
+                    comment: '物流公司'
+                },
                 /* 备注 */
                 {
                     name: 'remark',
