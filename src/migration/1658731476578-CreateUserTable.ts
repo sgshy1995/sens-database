@@ -65,12 +65,19 @@ export class CreateUserTable1658731476578 implements MigrationInterface {
                     isNullable: false,
                     comment: '用户身份'
                 },
-                /* 用户认证 */
+                /* 用户认证 2 已通过认证 1 认证审核中 0 未通过认证 */
                 {
                     name: 'authenticate',
                     type: 'int',
                     isNullable: false,
                     comment: '用户认证'
+                },
+                /* 是否有讲师权限 1 是 0 否 */
+                {
+                    name: 'if_lecture_auth',
+                    type: 'int',
+                    isNullable: false,
+                    comment: '是否有讲师权限'
                 },
                 /* 用户微信唯一标识 */
                 {
@@ -99,6 +106,13 @@ export class CreateUserTable1658731476578 implements MigrationInterface {
                     type: 'int',
                     isNullable: false,
                     comment: '是否为admin权限'
+                },
+                /* 冻结原因 */
+                {
+                    name: 'freeze_reason',
+                    type: 'varchar',
+                    isNullable: true,
+                    comment: '冻结原因'
                 },
                 /* 用户状态 */
                 {
